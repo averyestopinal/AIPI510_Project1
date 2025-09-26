@@ -18,7 +18,7 @@ print(f"Missing Values:\n{df.isnull().sum()}")
 """
 There is a large amount of missing data for other_fuel1, other_fuel2, and other_fuel3,
 but this should be expected due to some palnts only having one fuel type. Therefore,
-empty values here should be filled with "None" instead of NULL.
+empty values here should be filled with "None" instead of null.
 """
 
 # Filling empty entries for other_fuel1, other_fuel2, and other_fuel3 with "None"
