@@ -1,8 +1,24 @@
+import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 df = pd.read_csv("data/globalpowerplantdatabasev130/interim/global_power_plant_database_preprocessed.csv")
+
+# Log scaling of generation_gwh_{year}
+"""
+Filtering out generation_gwh_{year} < 0 
+This removes a unrealistc rows from the dataset becuase log return s0 when a value is between 0 and 1. The smallest plant in this data set is 1 MW,
+so a <1 gwh generation rate is very unlikely.
+"""
+df["log_capacity_mw"] = np.log1p(df["capacity_mw"])
+df["log_generation_gwh_2013"] = np.log1p(df["generation_gwh_2013"])
+df["log_generation_gwh_2014"] = np.log1p(df["generation_gwh_2014"])
+df["log_generation_gwh_2015"] = np.log1p(df["generation_gwh_2015"])
+df["log_generation_gwh_2016"] = np.log1p(df["generation_gwh_2016"])
+df["log_generation_gwh_2017"] = np.log1p(df["generation_gwh_2017"])
+df["log_generation_gwh_2018"] = np.log1p(df["generation_gwh_2018"])
+df["log_generation_gwh_2019"] = np.log1p(df["generation_gwh_2019"])
 
 # Compute avg_generation_gwh
 df["avg_generation_gwh"] = df[[f"generation_gwh_{y}" for y in range(2013, 2020)]].mean(axis=1)
