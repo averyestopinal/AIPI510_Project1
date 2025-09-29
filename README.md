@@ -1,9 +1,9 @@
 # AIPI510_Project1
 
-Overview:
+# Overview:
 This project studies the Global Power Plant Database on grounds of primary fuel type to anyalze the genration rate, capacity, runtime, and capacity factor. This data is usedful for anaylsis of energy grid modernization, fuel type choice, and power plant density.
 
-Citation: 
+# Citation: 
 Global Energy Observatory, Google, KTH Royal Institute of Technology in Stockholm, Enipedia, World Resources Institute. 2019. Global Power Plant Database. Published on Resource Watch and Google Earth Engine. http://resourcewatch.org/ https://earthengine.google.com/  
 
 Dataset Description:
@@ -14,7 +14,7 @@ country, country_long, name, gppd_idnr, capacity_mw, latitude, longitude, primar
 Estimations are provided by an method given here: https://www.wri.org/publication/estimating-power-plant-generation-global-power-plant-database
 
 
-Analysis:
+# Analysis:
 
 git clone https://github.com/averyestopinal/AIPI510_Project1.git
 cd AIPI510_Project1

@@ -23,6 +23,9 @@ df["log_generation_gwh_2019"] = np.log1p(df["generation_gwh_2019"])
 # Compute avg_generation_gwh
 df["avg_generation_gwh"] = df[[f"generation_gwh_{y}" for y in range(2013, 2020)]].mean(axis=1)
 
+# Log scaling to make data more graphically meaningful
+df["log_avg_generation_gwh"] = np.log1p(df["avg_generation_gwh"])
+
 # Compute runtime hours
 df["runtime"] = (df["avg_generation_gwh"] * 1000) / df["capacity_mw"]
 
