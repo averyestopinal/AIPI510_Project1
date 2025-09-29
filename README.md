@@ -19,11 +19,6 @@ Estimations are provided by an method given here: https://www.wri.org/publicatio
 git clone https://github.com/averyestopinal/AIPI510_Project1.git
 cd AIPI510_Project1
 
-Getting Data 
-    Download Data Here: https://datasets.wri.org/dataset/globalpowerplantdatabase
-    Version 1.3.0
-    Place the files in `data/raw/`
-
 pip install -r requirements.txt
 
 python scripts/preprocessing.py
